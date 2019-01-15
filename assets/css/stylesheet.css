@@ -1028,7 +1028,7 @@ h3.page-heading {
     margin-top: 30px;
 }
 .features .feature {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .features .feature .icon-container {
     display: block;
@@ -1166,7 +1166,7 @@ h3.page-heading {
     color: #fff
 }
 .features .phone-image {
-    margin: 0 auto;
+    margin: 30px auto 0;
     width: 90%
 }
 .features .limage {
