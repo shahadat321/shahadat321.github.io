@@ -996,6 +996,9 @@ h2.section_title_drakgray {
     text-align: center;
     /*line-height: 44px*/
 }
+h2.section_title_drakgray.about {
+    background: url(../images/title-hline.png) no-repeat center bottom;
+}
 h2.section_title_drakgray strong,
 h2.page-heading strong,
 h3.page-heading strong {
