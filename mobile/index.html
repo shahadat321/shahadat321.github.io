@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- jQuery Mobile CSS -->
+<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="css/swipebox.css">
+
+<style type="text/css">
+/*****************************************************
+ //New CSS
+*****************************************************/
+body								{font-family: 'Open Sans', sans-serif;font-weight: 300}
+
+/* Intro */
+#intro 								{height:300px;background-image: url('images/banner02.jpg');background-repeat: no-repeat;;background-size: cover;background-position: center;color: #fff;text-shadow:none;font-weight: 300;border: 0}
+#intro:after 						{position: absolute;top: 0;right: 0;bottom: 0;left: 0;height: 100%;width: 100%;background-color: rgba(0,0,0,0.7);content: "";z-index:1;}
+#intro .caption 					{position: absolute;text-align: center;top: 50%;transform: translateY(-50%);width: 100%;z-index: 2;margin-top: -10px}
+#intro .caption h1                  {font-size:1.55em;line-height: 1.125em;color:#1abb9b;font-weight:500;padding: 0;margin: 0 0 5px;letter-spacing: 2px}
+#intro .caption p.sep               {font-size: .85em;letter-spacing: 1px;margin: 0 0 13px;position: relative;}
+#intro .caption h2                  {font-size: 1em;padding:0 0 15px;margin: 0;font-weight: 300}
+
+#intro .caption p.sep span.before   {width:-webkit-calc(50% - 205px/2);width:calc(50% - 205px/2);left:0;-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%)}
+#intro .caption p.sep span.after    {width:-webkit-calc(50% - 205px/2);width:calc(50% - 205px/2);right:0;-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+#intro .caption p.sep span.after,
+#intro .caption p.sep span.before   {background-color:#fff;height:1px;opacity:0.3;position:absolute;top:50%;display:inline-block}
+#intro .caption p.sep .center       {height: 17px;display: inline-block;}
+
+#intro .caption a.start-btn       	{border-radius:3px;padding:8px 13px;background:#1abb9b;font-size:0.875em;color:#fff;font-weight: 300;text-decoration: none;display: inline-block;}
+
+#uiux 								{border-top: 1px #ccc solid;border: 0;text-align: center;margin:0;padding: 0;text-shadow:none;}
+#uiux .ui,
+#uiux .ux							{width: 50%;float: left;padding: 22px 0;font-size: 2em;font-weight: 500;color: #fff}
+#uiux .ui 							{background-color:#1abb9b;}
+#uiux .ux							{background-color:#049e7f;}
+
+
+
+/* About */
+#about h1 							{margin: 0 0 .3em}
+#about p 							{margin: 0 0 .3em}
+
+/* Skills */
+#skills-box							{text-align: center;margin:0;padding: 0}
+#skills-box li 						{list-style:none;float:left;width:33%;padding: 18px 7px;line-height: 1em;border: 1px #ccc solid;box-sizing:border-box;}
+#skills-box li.device-show 			{display: none;}
+#skills-box li h2.heading 			{font-size:0.9em;font-weight: 400;line-height: 1.7em;margin: 0;padding: 0}
+#skills-box li p.des 				{font-size:.75em;margin: 0;padding: 0}
+#skills-box span					{display: block;}
+
+/* Port */
+#port 								{border-top: 1px #ccc solid;border-bottom: 1px #ccc solid;background-color:#1abb9b;text-align: center;margin: 35px 0;padding: 40px 0;text-shadow:none;}
+#port a.port-btn       				{border-radius:3px;padding:10px 15px;background:#fff;font-size:1.1em;color:#1abb9b;font-weight: 300;text-decoration: none;display: inline-block;}
+
+
+#portfolio 							{padding-top: 10px;}
+#portfolio ul#gallery 				{margin: 0;padding: 0;text-align: center;}
+#portfolio ul#gallery li 			{list-style: none;display: inline-block;width: 49%;overflow: hidden;position: relative;}
+#portfolio ul#gallery li img		{max-width: 100%;width: 100%;}
+#portfolio ul#gallery li a 			{display: block;}
+#portfolio ul#gallery .box .caption	{position: absolute;left:0;bottom:5px;width: 100%;background-color: rgba(0,0,0,0.6); z-index: 99;padding:6px 8px;text-align: left;text-shadow: none;color: #fff;font-size: 0.85em;font-weight: 300;}
+ul#box-container 					{text-align: center;}
+ul#box-container li 				{list-style: none;margin:0 10px; display: inline-block; text-align: center;}
+
+
+/* Seprator */
+.sep-heading						{background-color:#eee;height:2px;position: relative;}
+.sep-heading .circle				{margin:0 auto;width:75px;height:75px;line-height:4.6875em;position: absolute;left: 0;right: 0;top: -42px;border-radius: 50%;border: 5px #f9f9f9 solid;box-shadow: 0 1px 0 #f3f3f3;text-align: center;color: #fff;text-shadow:none;overflow: hidden;}
+.sep-heading .circle span			{position: absolute;width: 100%;height: 100%;top: 0;right: 0;bottom: 0;left: 0;content: "";z-index: 1;}
+
+.sep-heading.skills					{margin:22px 0 56px;}
+.sep-heading.skills .circle			{background-image: url('images/skills.jpg');background-size: 100%}
+.sep-heading.skills .circle span	{background: rgba(26,187,155,0.85);}
+
+.sep-heading.portfolio				{margin:38px 0 46px;}
+.sep-heading.portfolio .circle		{background-image: url('images/port.jpg');background-size: 100%}
+.sep-heading.portfolio .circle span	{background: rgba(0,153,204,0.92);}
+
+.sep-heading.exp					{margin:22px 0 40px;}
+.sep-heading.exp .circle			{background-image: url('images/exp.jpg');background-size: 130%}
+.sep-heading.exp .circle span		{background: rgba(238,104,0,0.85);}
+
+.sep-heading.contact				{margin:22px 0 44px;}
+.sep-heading.contact .circle		{background-image: url('images/contact.jpg');background-size: 100%}
+.sep-heading.contact .circle span	{background: rgba(255,196,0,0.85);}
+
+.sep-heading.call					{margin:22px 0 57px;}
+.sep-heading.call .circle			{background-image: url('images/call.jpg');background-size: 125%;background-position: center;}
+.sep-heading.call .circle span		{background: rgba(40,192,14,0.85);}
+
+/* Experience */
+.exp-main							{overflow: hidden;position: relative;padding-bottom: 0}
+.exp-main .center-line 				{height:100%;width: 100%}
+.exp-main .center-line:after,
+.exp-main .center-line::after 		{content:"";display:block;position:absolute;top:0;left:49.8%;width:2px;height:100%;background-color:#eee;z-index:-1;}
+
+.exp-main .blank-box				{padding: 20px 0;}
+.exp-main .blank-box span			{margin:0 auto;width:20px;height:20px;background-color:#ddd;border-radius: 50%;display: block;}
+.exp-main .blank-box:hover span		{background-color: #e74b3b}
+.exp-main .content-box				{background-color: #fff;padding: 15px 10px;text-align: center;box-shadow: 0 1px 0 #f3f3f3;}
+
+.exp-main .content-box h4,
+.exp-main .content-box h5,
+.exp-main .content-box p			{margin: 0;padding: 0;font-weight: 400}
+
+.exp-main .content-box .designation	{}
+.exp-main .content-box .company		{font-size: 0.75em;margin-bottom: 3px;margin-bottom: 8px;}
+.exp-main .content-box .duration	{font-size: 0.625em;font-weight: 300;}
+.exp-main .content-box .duration span{background-color: #eee;padding: 2px 7px;border-radius: 10px;}
+
+.exp-main .content-box .role		{margin: 7px 0 0;font-weight: 300;font-size: 0.875em}
+.ui-mobile label  					{margin-top: 10px;margin-bottom: 2px;}
+
+/* Call */
+.call-section						{text-align: center;padding: 1em;}
+.call-section h3.phone				{margin: 0;padding: 0;font-size: 2em;font-weight: 600;}
+.call-section h3.phone a			{color: #555;text-decoration: none}
+.call-section p						{margin: 2px 0 12px;padding: 0;font-size: 1.0625em;color: #757575}
+.call-section p .ui					{color: #1abb9b;font-weight: 400}
+.call-section p .ux					{color: #e66700;font-weight: 400}
+
+html .call-section .social a,
+#intro .caption .social a			{color: #fff;text-shadow:none;}
+
+.social .fa-facebook,
+.social .fa-twitter,
+.social .fa-linkedin,
+.social .fa-google-plus,
+.social .fa-skype,
+.social .fa-whatsapp				{background-color: #ccc;width: 26px;height: 26px;line-height: 1.9em;font-size: 0.85em;border-radius: 50%}
+
+.social .fa-facebook				{background-color: #3c5b97}
+.social .fa-twitter					{background-color: #59adec}
+.social .fa-linkedin				{background-color: #0f7fba}
+.social .fa-google-plus				{background-color: #dc4c3f}
+.social .fa-skype					{background-color: #1db0ed}
+.social .fa-whatsapp				{background-color: #4cc85b}
+
+#intro .caption .social a 			{margin: 0 2px}
+#intro .caption .social .fa-facebook,
+#intro .caption .social .fa-linkedin,
+#intro .caption .social .fa-skype,
+#intro .caption .social .fa-whatsapp {width: 33px;height: 33px;line-height: 2.05em;font-size: 1em;}
+
+
+#footer 							{font-weight: 300;text-align: center;font-size: .9em;padding: 10px 0;color: #888}
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* Media Queries
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+@media all and (max-width: 640px) 	{
+	#skills-box li 					{}
+}
+
+@media all and (max-width: 479px) 	{
+	#intro 							{height:280px;}
+	#intro .caption h1              {font-size:1.35em;line-height: 1.1em;}
+	#intro .caption h2 				{font-size: 0.9375em;}
+	#skills-box li 					{width: 50%;}
+	#skills-box li.device-show 		{display: block;}
+}
+@media all and (max-width: 320px) 	{
+	#intro 							{height:250px;}
+	#skills-box li 					{width: 100%;float: none;}
+}
+
+#main-header 						{background-color: #157ccb;text-shadow:none;color: #fff}
+#main-header #right-nav 			{position:absolute;top:6px;right:15px;}
+#main-header #right-nav a 			{color: #fff;font-size: 24px; display: block;font-weight: 300}
+
+
+</style>
+
+</head>
+<body>
+<div class="success" style="display:none"><i class="fa fa-close pop-close"></i><span>Thank you for your query.</span></div>
+<div data-role="page" id="pageone">
+	<div data-role="panel" data-position="right" data-display="reveal" data-theme="b" id="nav-panel">
+		<ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Menu</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#call">Call Me</a></li>
+		</ul>
+	</div>
+
+	<div id="main-header" data-role="header" data-position="fixed">
+  		<h1>UI Drive</h1>
+  		<div id="right-nav"><a href="#nav-panel"><i class="fa fa-navicon fa-1x"></i></a></div>
+	</div>
+
+	<div id="intro" data-role="header" class="ui-header ui-bar-a" role="banner">
+		<div class="caption">
+			<span style="width:70px;height:70px;background:#fff;border-radius:50%;display:inline-block;margin-bottom:7px;background-image: url('images/skills.jpg');background-size: 100%;border:3px #fff solid">mm</span>
+	        <h1>Shahadat Hussain</h1>
+			<p class="sep">
+				<span class="before"></span>
+				<span class="center">Front-end Developer <strong>INDIA</strong></span>
+				<span class="after"></span>
+			</p>
+	        <div class="social">
+				<a href=""><i class="fa fa-facebook"></i></a>
+				<a href=""><i class="fa fa-linkedin"></i></a>
+				<a href=""><i class="fa fa-skype"></i></a>
+				<a href=""><i class="fa fa-whatsapp"></i></a>
+			</div>
+	    </div>
+    </div>
+
+    <!-- Port -->
+	<div id="uiux" role="main" class="ui-content">
+		<div class="ui">&lt;UI&gt;</div>
+		<div class="ux">&lt;UX&gt;</div>
+	</div>
+
+    <!-- About -->
+	<div id="about" role="main" class="ui-content">
+		<h1>Well, hello there!</h1>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...</p>
+	</div>
+
+	<!-- Skills -->
+	<div id="skills" role="main" class="ui-content">
+		<div class="sep-heading skills">
+			<div class="circle"><span>Skills</span></div>
+		</div>
+
+		<div class="ui-grid-b">
+			<ul id="skills-box">
+			    <li><span class="fa fa-html5 fa-2x"></span>
+					<h2 class="heading">PSD to HTML5</h2>
+					<p class="des">Resource for develop structure and presentation of abstract content for design.</p>
+				</li>
+			    <li><span class="fa fa-css3 fa-2x"></span>
+					<h2 class="heading">CSS2/CSS3</h2>
+					<p class="des">Resource for develop structure and presentation of abstract content for design.</p>
+				</li>
+			    <li><span class="fa fa-android fa-2x"></span>
+					<h2 class="heading">HTML5 Apps</h2>
+					<p class="des">Resource for develop structure and presentation of abstract content for design.</p>
+			    </li>
+			    <li><span class="fa fa-code fa-2x"></span>
+					<h2 class="heading">JavaScript / jQuery</h2>
+					<p class="des">Resource for develop structure and presentation of abstract content for design.</p>
+				</li>
+			    <li><span class="fa fa-laptop fa-2x"></span>
+					<h2 class="heading">Responsive (RWD)</h2>
+					<p class="des">Resource for develop structure and presentation of abstract content for design.</p>
+				</li>
+			    <li><span class="fa fa-tablet fa-2x"></span>
+					<h2 class="heading">Twitter Bootstrap</h2>
+					<p class="des">Resource for develop structure and presentation of abstract content for design.</p>
+			    </li>
+			    <li><span class="fa fa-code fa-2x"></span>
+					<h2 class="heading">LESS & SASS</h2>
+					<p class="des">Resource for develop structure and presentation of abstract content for design.</p>
+			    </li>
+			    <li class="device-show"><span class="fa fa-clipboard fa-2x"></span>
+					<h2 class="heading">Web Layout Design</h2>
+					<p class="des">Resource for develop structure and presentation of abstract content for design.</p>
+			    </li>
+			    <li><span class="fa fa-wordpress fa-2x"></span>
+					<h2 class="heading">PSD to Wordpress</h2>
+					<p class="des">Resource for develop structure and presentation of abstract content for design.</p>
+				</li>
+			    <li><span class="fa fa-joomla fa-2x"></span>
+					<h2 class="heading">PSD to Joomla</h2>
+					<p class="des">Resource for develop structure and presentation of abstract content for design.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Port -->
+	
+
+	<div id="portfolio" role="main" class="ui-content">
+		<div class="sep-heading portfolio">
+			<div class="circle"><span>Port</span></div>
+		</div>
+
+		<div id="portfolio">
+			<div id="try"></div>
+			<ul id="gallery">
+				<li class="box"><a href="images/1.jpg" class="swipebox" title="Test Gallery #01"><img src="images/1s.jpg" alt="image"><span class="caption">Test Gallery</span></a></li>
+				<li class="box"><a href="images/2.jpg" class="swipebox" title="Test Gallery #02"><img src="images/2s.jpg" alt="image"><span class="caption">Test Gallery</span></a></li>
+				<li class="box"><a href="images/3.jpg" class="swipebox" title="Test Gallery #03"><img src="images/3s.jpg" alt="image"><span class="caption">Test Gallery</span></a></li>
+				<li class="box"><a href="images/4.jpg" class="swipebox" title="Test Gallery #04"><img src="images/4s.jpg" alt="image"><span class="caption">Test Gallery</span></a></li>
+				<li class="box"><a href="images/1.jpg" class="swipebox" title="Test Gallery #05"><img src="images/1s.jpg" alt="image"><span class="caption">Test Gallery</span></a></li>
+				<li class="box"><a href="images/2.jpg" class="swipebox" title="Test Gallery #06"><img src="images/2s.jpg" alt="image"><span class="caption">Test Gallery</span></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="port" role="main" class="ui-content"><a href="#about" class="port-btn"><i class="fa fa-location-arrow"></i> View Portfolio</a></div>
+
+	<!-- Exp -->
+	<div id="experience" role="main" class="ui-content exp-main">
+		<div class="center-line">
+			<div class="sep-heading exp">
+				<div class="circle"><span>Exp</span></div>
+			</div>
+
+			<div class="blank-box"><span></span></div>
+			<div class="content-box">
+				<h4 class="designation">Front-end Developer</h3>
+				<h5 class="company">JK Technosoft Ltd.</h4>
+				<p class="duration"><span>Mar, 2013</span> to <span>July, 2015</span></p>
+				<p class="role">HTML5, CSS3, Responsive (RWD), Twitter Bootstrap, JavaScript, jQuery,  @Media Query, LESS, SASS, @Font-face, PSD to Wordpress and PSD to Joomla.</p>
+			</div>
+
+			<div class="blank-box"><span></span></div>
+			<div class="content-box">
+				<h4 class="designation">UI/UX Developer</h3>
+				<h5 class="company">JK Technosoft Ltd.</h4>
+				<p class="duration"><span>Mar, 2013</span> to <span>July, 2015</span></p>
+				<p class="role">HTML5, CSS3, Responsive (RWD), Twitter Bootstrap, JavaScript, jQuery,  @Media Query, LESS, SASS, @Font-face, PSD to Wordpress and PSD to Joomla.</p>
+			</div>
+			<div class="blank-box"><span></span></div>
+			<div class="content-box">
+				<h4 class="designation">UI/UX Developer</h3>
+				<h5 class="company">JK Technosoft Ltd.</h4>
+				<p class="duration"><span>Mar, 2013</span> to <span>July, 2015</span></p>
+				<p class="role">HTML5, CSS3, Responsive (RWD), Twitter Bootstrap, JavaScript, jQuery,  @Media Query, LESS, SASS, @Font-face, PSD to Wordpress and PSD to Joomla.</p>
+			</div>
+			<div class="blank-box"><span></span></div>
+		</div>
+	</div>
+
+	<!-- Contact -->
+	<!--<div id="contact" role="main" class="ui-content">
+		<div class="sep-heading contact">
+			<div class="circle"><span>Contact</span></div>
+		</div>
+		<div data-role="fieldcontain">
+			<form id="contact_frm" name="contact_frm" class="ui-body ui-body-a ui-corner-all">
+			    <fieldset>
+			        <div data-role="fieldcontain">
+			            <label for="username">Name:</label>
+			            <input type="text" id="name" name="name" placeholder="Name*" required>
+
+			            <label for="email">Email:</label>
+			            <input type="email" id="email_id" name="email_id" placeholder="E-mail ID*" required> 
+
+			            <label for="textarea">Message:</label>
+			            <textarea rows="5" id="comment" cols="35" name="comment" placeholder="Your Query*" required></textarea>
+			        </div>
+			        <input type="submit" data-theme="b" name="submit" id="submit" value="Submit">
+			    </fieldset>
+			</form>
+			
+		</div>
+	</div>-->
+
+	<!-- Call -->
+	<div id="call" role="main" class="ui-content">
+		<div class="sep-heading call">
+			<div class="circle"><span>Call</span></div>
+		</div>
+		<div class="ui-body ui-body-a ui-corner-all call-section">
+			<h3 class="phone"><a href="tel:+919910613200">+91-9910613200</a></h3>
+			<p><span class="ui">ui</span>n<span class="ux">ux</span>experts@gmail.com</p>
+			<div class="social">
+				<a href=""><i class="fa fa-facebook"></i></a>
+				<a href=""><i class="fa fa-twitter"></i></a> 
+				<a href=""><i class="fa fa-linkedin"></i></a>
+				<a href=""><i class="fa fa-google-plus"></i></a>
+				<a href=""><i class="fa fa-skype"></i></a>
+				<a href=""><i class="fa fa-whatsapp"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer" data-role="footer">Copyright - 2016</div>
+</div>
+
+<!-- JS Library -->
+<!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="js/jquery.swipebox.js"></script>
+<script src="js/custom.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	/* Basic Gallery */
+	$( '.swipebox' ).swipebox();
+	
+	/* Video */
+	$( '.swipebox-video' ).swipebox();
+
+	/* Nav Scroll */
+	$('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+	});
+	$("#right-nav a").removeAttr('class');
+
+	$(".pop-close").click(function(){
+		$(".success").hide();
+	});
+});
+</script>
+</body>
+</html>
