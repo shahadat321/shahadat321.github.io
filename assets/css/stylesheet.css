@@ -980,7 +980,7 @@ Skills background-color: #00b39f;
     height: 100%;
     content: "";
     background-color: #1f4c59
-    background-colo/*r*/: rgba(255, 196, 0, 0.8);
+    background-color: rgba(255, 196, 0, 0.8);
 }
 .features {
     background-color: #fff;
@@ -1023,7 +1023,7 @@ h3.page-heading {
 }
 .features p {
     font-size: 15px;
-    line-height: 22px
+    line-height: 20px
 }
 .features .features-left {
     text-align: right;
@@ -1043,13 +1043,13 @@ h3.page-heading {
     margin-left: 20px;
 }
 .features .feature .icon-container .icon {
-    border: 1px solid #008ed6;
-    color: #008ed6;
+    border: 1px solid #1f4c59;
+    color: #1f4c59;
     width: 55px;
     height: 55px;
     border-radius: 50%;
     line-height: 55px;
-    font-size: 18px;
+    font-size: 23px;
     text-align: center;
     -webkit-transition: all ease-in 0.25s;
     transition: all ease-in 0.25s;
@@ -1073,16 +1073,171 @@ h3.page-heading {
     margin: 0;
     font-size: 16px;
 }
-.features-left .feature.skills-icon:hover .icon,
-.features-right .feature.skills-icon:hover .icon {
-    background-color: #ff5954;
+.features .feature.skills-icon:hover .icon,
+.features .feature.skills-icon:hover .icon {
+    background-color: #000;
     color: #fff;
-    border-color: #fff;
+    border-color: #000;
     transform: scale3d(1.15,1.15,1.15);
     /*-webkit-transform: rotate(360deg);
     transform: rotate(360deg);*/
 }
-.features-left .feature.skills-icon:first-child .icon {
+
+
+.features .feature .icon-container .icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+}
+
+
+.features .feature.skills-icon.html5 .icon {
+    color: #f46518;
+    border-color: #f46518
+}
+.features .feature.skills-icon.html5:hover .icon {
+    color: #fff;
+    background-color: #f46518;
+}
+
+.features .feature.skills-icon.css3 .icon {
+    color: #2ba6ff;
+    font-size: 20px;
+    border-color: #2ba6ff
+}
+.features .feature.skills-icon.css3:hover .icon {
+    color: #fff;
+    background-color: #2ba6ff;
+}
+
+
+.features .feature.skills-icon.sass .icon {
+    color: #cf649a;
+    border-color: #cf649a;
+    background-size: 55%;
+    background-image: url(../images/icons/sass-logo.svg);
+}
+.features .feature.skills-icon.sass:hover .icon {
+    color: #fff;
+    background-color: #cf649a;
+    background-image: url(../images/icons/sass-logo-hover.svg);
+}
+
+.features .feature.skills-icon.less .icon {
+    color: #2a4f83;
+    border-color: #2a4f83;
+    background-size: 58%;
+    background-image: url(../images/icons/less-logo.svg);
+}
+.features .feature.skills-icon.less:hover .icon {
+    color: #fff;
+    background-color: #2a4f83;
+    background-image: url(../images/icons/less-logo-hover.svg);
+}
+
+.features .feature.skills-icon.github .icon {
+    color: #6e5494;
+    font-size: 28px;
+    border-color: #6e5494;
+}
+.features .feature.skills-icon.github:hover .icon {
+    color: #fff;
+    background-color: #6e5494;
+}
+
+.features .feature.skills-icon.amp .icon {
+    color: #0479c2;
+    border-color: #0479c2;
+    background-image: url(../images/icons/amp-logo.svg);
+}
+.features .feature.skills-icon.amp:hover .icon {
+    color: #fff;
+    background-color: #0479c2;
+    background-image: url(../images/icons/amp-logo-hover.svg);
+}
+
+.features .feature.skills-icon.bem .icon {
+    color: #444;
+    font-size: 25px;
+    border-color: #444;
+}
+.features .feature.skills-icon.bem:hover .icon {
+    color: #fff;
+    background-color: #222;
+}
+
+.features .feature.skills-icon.jquery .icon {
+    color: #f7df1e;
+    border-color: #f7df1e;
+    background-image: url(../images/icons/jquery-logo.svg);
+}
+.features .feature.skills-icon.jquery:hover .icon {
+    color: #fff;
+    background-color: #f7df1e;
+    background-image: url(../images/icons/jquery-logo-hover.svg);
+}
+
+.features .feature.skills-icon.responsive .icon {
+    color: #444;
+    border-color: #444;
+    background-size: 58%;
+    background-image: url(../images/icons/responsive-logo.svg);
+}
+.features .feature.skills-icon.responsive:hover .icon {
+    color: #fff;
+    background-color: #222;
+    background-image: url(../images/icons/responsive-logo-hover.svg);
+}
+
+.features .feature.skills-icon.bootstrap .icon {
+    color: #3e1c45;
+    border-color: #3e1c45;
+    background-image: url(../images/icons/bootstrap-logo.svg);
+}
+.features .feature.skills-icon.bootstrap:hover .icon {
+    color: #fff;
+    background-color: #3e1c45;
+    background-image: url(../images/icons/bootstrap-logo-hover.svg);
+}
+
+
+.features .feature.skills-icon.react .icon {
+    color: #61dafb;
+    border-color: #61dafb;
+    background-image: url(../images/icons/react-logo.svg);
+}
+.features .feature.skills-icon.react:hover .icon {
+    color: #fff;
+    background-color: #61dafb;
+    background-image: url(../images/icons/react-logo-hover.svg);
+}
+
+
+
+
+.features .feature.skills-icon.wordpress .icon {
+    color: #12a5d7;
+    border-color: #12a5d7;
+    background-image: url(../images/icons/wordpress-logo.svg);
+}
+.features .feature.skills-icon.wordpress:hover .icon {
+    color: #fff;
+    background-color: #12a5d7;
+    background-image: url(../images/icons/wordpress-logo-hover.svg);
+}
+
+.features .feature.skills-icon.joomla .icon {
+    color: #f44321;
+    border-color: #f44321;
+    background-image: url(../images/icons/joomla-logo.svg);
+}
+.features .feature.skills-icon.joomla:hover .icon {
+    color: #fff;
+    background-color: #f44321;
+    background-image: url(../images/icons/joomla-logo-hover.svg);
+}
+
+/*.features-left .feature.skills-icon:first-child .icon {
     color: #f46518;
     border-color: #f46518
 }
@@ -1167,7 +1322,9 @@ h3.page-heading {
 .features-right .feature.skills-icon:hover:nth-child(5) .icon {
     background-color: #fe8f1b;
     color: #fff
-}
+}*/
+
+
 .features .phone-image {
     margin: 30px auto 0;
     width: 90%
