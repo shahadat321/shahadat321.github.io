@@ -43,7 +43,7 @@ h6 {
 /* Intro */
 #intro {
     height: 300px;
-    background-image: url('images/banner02.jpg');
+    background-image: url('../images/banner02.jpg');
     background-repeat: no-repeat;
     ;
     background-size: cover;
@@ -338,7 +338,7 @@ ul#box-container li {
 }
 
 .sep-heading.skills .circle {
-    background-image: url('images/skills.jpg');
+    background-image: url('../images/skills.jpg');
     background-size: 100%
 }
 
@@ -351,7 +351,7 @@ ul#box-container li {
 }
 
 .sep-heading.portfolio .circle {
-    background-image: url('images/port.jpg');
+    background-image: url('../images/port.jpg');
     background-size: 100%
 }
 
@@ -364,7 +364,7 @@ ul#box-container li {
 }
 
 .sep-heading.exp .circle {
-    background-image: url('images/exp.jpg');
+    background-image: url('../images/exp.jpg');
     background-size: 130%
 }
 
@@ -377,7 +377,7 @@ ul#box-container li {
 }
 
 .sep-heading.contact .circle {
-    background-image: url('images/contact.jpg');
+    background-image: url('../images/contact.jpg');
     background-size: 100%
 }
 
@@ -390,7 +390,7 @@ ul#box-container li {
 }
 
 .sep-heading.call .circle {
-    background-image: url('images/call.jpg');
+    background-image: url('../images/call.jpg');
     background-size: 125%;
     background-position: center;
 }
