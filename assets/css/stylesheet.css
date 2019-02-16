@@ -1212,6 +1212,16 @@ h3.page-heading {
     background-image: url(../images/icons/react-logo-hover.svg);
 }
 
+.features .feature.skills-icon.android .icon {
+    color: #a4c82b;
+    border-color: #a4c82b;
+}
+.features .feature.skills-icon.android:hover .icon {
+    color: #fff;
+    background-color: #a4c82b;
+}
+
+
 
 
 

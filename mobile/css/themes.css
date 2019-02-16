@@ -179,9 +179,12 @@ h6 {
 }
 
 #about p {
-    margin: 0 0 .3em
+    margin: 0 0 .3em;
+    line-height: 150%
 }
-
+#about a {
+    font-weight: 300;
+}
 /* Skills */
 #skills-box {
     text-align: center;
@@ -193,7 +196,8 @@ h6 {
     list-style: none;
     float: left;
     width: 33%;
-    padding: 18px 7px;
+    min-height: 175px;
+    padding: 15px 10px;
     line-height: 1em;
     border: 1px #ccc solid;
     box-sizing: border-box;
@@ -212,7 +216,7 @@ h6 {
 }
 
 #skills-box li p.des {
-    font-size: .75em;
+    font-size: 0.8750em;
     margin: 0;
     padding: 0
 }
@@ -220,6 +224,56 @@ h6 {
 #skills-box span {
     display: block;
 }
+
+#skills-box .html5 {
+    color: #f46518;
+    border-color: #f46518
+}
+#skills-box .css3 {
+    color: #2ba6ff;
+}
+
+
+#skills-box .sass {
+    color: #cf649a;
+}
+
+#skills-box .less {
+    color: #2a4f83;
+}
+#skills-box .github {
+    color: #6e5494;
+}
+#skills-box .android {
+    color: #a4c82b;
+}
+#skills-box .amp {
+    color: #0479c2;
+}
+#skills-box .bem {
+    color: #444;
+}
+
+#skills-box .jquery {
+    color: #f7df1e;
+}
+
+#skills-box .responsive {
+    color: #444;
+}
+#skills-box .bootstrap {
+    color: #3e1c45;
+}
+#skills-box .react {
+    color: #61dafb;
+}
+#skills-box .wordpress {
+    color: #12a5d7;
+}
+#skills-box .joomla {
+    color: #f44321;
+}
+
 
 /* Port */
 #port {
@@ -579,6 +633,20 @@ html .call-section .social a,
     font-size: 1em;
 }
 
+.call-section a.email {
+    font-size: 16px;
+    color: #666;
+    font-weight: 300;
+}
+.call-section a.email .ui {
+    color: #00b39f;
+    font-weight: 400;
+}
+.call-section a.email .ux {
+    color: #e66700;
+    font-weight: 400;
+}
+
 #footer {
     font-weight: 300;
     text-align: center;
@@ -592,11 +660,8 @@ html .call-section .social a,
 |* Media Queries
 |* ------------------------------------------------------------ *|
 \* ------------------------------------------------------------ */
-@media all and (max-width: 640px) {
-    #skills-box li {}
-}
 
-@media all and (max-width: 479px) {
+@media all and (max-width: 639px) {
     #intro {
         height: 280px;
     }
@@ -612,6 +677,8 @@ html .call-section .social a,
 
     #skills-box li {
         width: 50%;
+        padding: 15px 6px;
+        min-height: 185px;
     }
 
     #skills-box li.device-show {
@@ -619,7 +686,7 @@ html .call-section .social a,
     }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 359px) {
     #intro {
         height: 250px;
     }
@@ -627,7 +694,9 @@ html .call-section .social a,
     #skills-box li {
         width: 100%;
         float: none;
+        min-height: 140px;
     }
+
 }
 
 #main-header {
