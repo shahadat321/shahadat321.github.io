@@ -1,5 +1,12 @@
 @charset "utf-8";
-
+*, *:after, *:before {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 body {
     font-size: 100%;
     font-weight: 300;
@@ -75,6 +82,16 @@ h6 {
     width: 100%;
     z-index: 2;
     margin-top: -10px
+}
+#intro .caption .author {
+    width: 80px;
+    height: 80px;
+    display:inline-block;
+    margin-bottom: 10px;
+    border-radius: 100%;
+    background-image: url('../images/author.jpg');
+    background-size: 100%;
+    border: 3px #fff solid
 }
 
 #intro .caption h1 {
@@ -281,7 +298,7 @@ h6 {
     border-bottom: 1px #ccc solid;
     background-color: #1abb9b;
     text-align: center;
-    margin: 35px 0;
+    margin: 15px 0 30px;
     padding: 40px 0;
     text-shadow: none;
 }
@@ -361,7 +378,7 @@ ul#box-container li {
     margin: 0 auto;
     width: 75px;
     height: 75px;
-    line-height: 4.6875em;
+    line-height: 4em;
     position: absolute;
     left: 0;
     right: 0;
@@ -654,7 +671,17 @@ html .call-section .social a,
     padding: 10px 0;
     color: #888
 }
-
+#swipebox-slider .slide {
+    padding: 20px;
+}
+#swipebox-close {
+    top: 24px;
+    right: 24px;
+    width: 37px;
+    height: 37px;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-position: 9px 5px;
+}
 /* ------------------------------------------------------------ *\
 |* ------------------------------------------------------------ *|
 |* Media Queries
