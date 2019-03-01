@@ -2213,8 +2213,14 @@ form.contact-form textarea {
         width: 100%;
         float: left;
         position: relative;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+    }
+    #main-nav ul li a span {
+        height: auto;
+    }
+    #main-nav ul li a span:after {
+        display: none;
     }
     nav#main-nav>ul li:hover {
         background-color: #00b39f
@@ -2223,10 +2229,10 @@ form.contact-form textarea {
     
     nav#main-nav>ul li a {
         color: #fff;
-        padding: 0 10px;
+        padding: 0 15px;
         margin: 0;
         width: 100%;
-        line-height: 40px;
+        line-height: 44px;
     }
     nav#main-nav ul li a.active {
         color: #fff;
@@ -2484,7 +2490,7 @@ form.contact-form textarea {
     }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 639px) {
 
     #intro .caption {
         padding: 100px 20px 50px;
@@ -2537,6 +2543,7 @@ form.contact-form textarea {
     #about .content-box .content {
         width: 90%;
     }
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
