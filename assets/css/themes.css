@@ -512,7 +512,7 @@ Intro
 #intro .caption h3 {
     color: #fff;
     font-size: 24px;
-    padding: 10px 0 30px;
+    padding: 10px 0 25px;
     margin: 0
 }
 
@@ -594,11 +594,32 @@ Intro
     -o-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
 }
-
 .home-btn:hover span {
     opacity: 1;
     width: 100px;
     right: 20px;
+}
+.resume-btn {
+    border-radius: 4px;
+    margin-bottom: 20px;
+    opacity: 0.85;
+    display: block;
+    font-size: 0.9375em;
+    display: inline-block;
+    background-color: #00b39f;
+    text-transform: uppercase;
+}
+.resume-btn a {
+    color: var(--color-white);
+    display: block;
+    padding: 0 15px 1px;
+    line-height: 38px;
+}
+.resume-btn i {
+    font-size: 1.1875em;
+}
+.resume-btn:hover {
+    opacity: 1;
 }
 
 .animate-btn {
