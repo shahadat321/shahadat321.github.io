@@ -1420,9 +1420,10 @@ h3.page-heading {
 }
 
 .features .feature.skills-icon.react:hover .icon {
-    color: #fff;
-    background-color: #61dafb;
-    background-image: url(../images/icons/react-logo-hover.svg);
+    color: #20232a;
+    border-color: #20232a;
+    background-color: #20232a;
+    background-image: url(../images/icons/react-logo.svg);
 }
 
 .features .feature.skills-icon.android .icon {
