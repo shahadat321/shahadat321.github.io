@@ -1,46 +1,64 @@
-// jQuery('html').removeClass('no-js').addClass('js');
+jQuery('html').removeClass('no-js').addClass('js');
 jQuery(document).ready(function($) {
+    // variable to hold request
     var request;
 
     $("#form_data").submit(function(event) {
+
+        // abort any pending request
         if (request) {
             request.abort();
         }
+        // setup some local variables
         var $form = $(this);
+        // let's select and cache all the fields
         var $inputs = $form.find("input, select, button, textarea");
+        // serialize the data in the form
         var serializedData = $form.serialize();
 
+        // Disabled form elements will not be serialized.
         $inputs.prop("disabled", true);
         $('#result').text('Sending data...');
 
+        // fire off the request to /form.php
         request = $.ajax({
             url: "https://script.google.com/macros/s/AKfycbw31RppvJmmR-jHf3hS9BhtAcLVlL8FHqDs-mMeE10khROwvg/exec",
             type: "post",
             data: serializedData
         });
 
+        // callback handler that will be called on success
         request.done(function(response, textStatus, jqXHR) {
             $('#result').html('<span class="success">Thank you for your query.</span>');
             console.log("Hooray, it worked!");
         });
 
+        // callback handler that will be called on failure
         request.fail(function(jqXHR, textStatus, errorThrown) {
+            // log the error to the console
             console.error(
                 "The following error occured: " +
                 textStatus, errorThrown
             );
         });
 
+        // if the request failed or succeeded
         request.always(function() {
+            // reenable the inputs
             $inputs.prop("disabled", false);
         });
 
         $('#form_data').find('input, textarea').val('');
+
+        // prevent default posting of form
         event.preventDefault();
     });
 });
 
 $(window).load(function() {
+    /* ==============================================
+    Preloader
+    =============================================== */
     var preloaderDelay = 350,
         preloaderFadeOutTime = 800;
 
@@ -210,9 +228,6 @@ $(document).ready(function() {
             var $section = $(this);
             var hash = '#' + this.id;
             $('a[href="' + hash + '"]').on('click touchstart', function(event) {
-
-                $("#main-nav ul").removeAttr("style");
-                
                 stopEvent(event);
                 isMoving = true;
                 if (wWidth > mobileRes) {
@@ -286,29 +301,29 @@ $(document).ready(function() {
     /* ==============================================
     Input Placeholder for IE
     =============================================== */
-    // if (!Modernizr.input.placeholder) {
-    //     $('[placeholder]').focus(function() {
-    //         var input = $(this);
-    //         if (input.val() == input.attr('placeholder')) {
-    //             input.val('');
-    //             input.removeClass('placeholder');
-    //         }
-    //     }).blur(function() {
-    //         var input = $(this);
-    //         if (input.val() == '' || input.val() == input.attr('placeholder')) {
-    //             input.addClass('placeholder');
-    //             input.val(input.attr('placeholder'));
-    //         }
-    //     }).blur();
-    //     $('[placeholder]').parents('form').submit(function() {
-    //         $(this).find('[placeholder]').each(function() {
-    //             var input = $(this);
-    //             if (input.val() == input.attr('placeholder')) {
-    //                 input.val('');
-    //             }
-    //         });
-    //     });
-    // }
+    if (!Modernizr.input.placeholder) {
+        $('[placeholder]').focus(function() {
+            var input = $(this);
+            if (input.val() == input.attr('placeholder')) {
+                input.val('');
+                input.removeClass('placeholder');
+            }
+        }).blur(function() {
+            var input = $(this);
+            if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                input.addClass('placeholder');
+                input.val(input.attr('placeholder'));
+            }
+        }).blur();
+        $('[placeholder]').parents('form').submit(function() {
+            $(this).find('[placeholder]').each(function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            });
+        });
+    }
     /* ==============================================
     Portfolio
     =============================================== */
