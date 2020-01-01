@@ -3,11 +3,9 @@
 :root {
     --font-base: "Open Sans", sans-serif;
     --font-headline: "Open Sans", sans-serif;
-
     --color-base: #1f4c59;
     --color-white: #fff;
     --color-link: #ff5954;
-
     --color-body: #fff;
 }
 
@@ -55,25 +53,32 @@ body {
         url(../font/Tungsten-Medium.ttf) format("truetype"),
         url(../font/Tungsten-Medium.svg#Tungsten\ Medium) format("svg")
 }
+
 .is-loading {
     display: none !important;
 }
+
 .is-hide {
     display: none !important;
 }
+
 .is-show {
     display: block !important;
 }
+
 p {
     margin: 0;
     padding: 0;
 }
+
 a {
     outline: none;
     text-decoration: none;
     color: var(--color-link);
 }
-button, a {
+
+button,
+a {
     outline: none;
     transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -81,12 +86,16 @@ button, a {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
     font-family: var(--font-headline);
 }
-
-
 
 hr {
     background: #e1e1e1;
@@ -244,7 +253,7 @@ Main Navigation
     width: 100%;
     height: 60px;
     min-width: 300px;
-    background-color: rgba(255, 255, 255, 1.0);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 #main-nav .logo-icon {
@@ -253,7 +262,6 @@ Main Navigation
     line-height: 60px;
     background: #00b39f;
     float: left;
-    padding-top: 3px;
     text-align: center;
 }
 
@@ -362,7 +370,6 @@ Main Navigation
     color: #fff;
 }
 
-
 /* ==================================================================
 Sections
 ================================================================== */
@@ -413,7 +420,7 @@ Intro
 }
 
 #intro .header {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.25);
     width: 100%;
     min-height: 60px;
     position: absolute;
@@ -485,8 +492,6 @@ Intro
     z-index: 5;
 }
 
-
-
 #intro .caption h1 {
     font-size: 120px;
     color: #fff;
@@ -497,7 +502,7 @@ Intro
 
 #intro .caption p.sep {
     font-size: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     margin: 0 0 10px;
     position: relative;
 }
@@ -513,7 +518,9 @@ Intro
     color: #fff;
     font-size: 24px;
     padding: 10px 0 25px;
-    margin: 0
+    margin: 0;
+    letter-spacing: 2.5px;
+    line-height: 120%;
 }
 
 #intro .caption p.sep span.before {
@@ -594,11 +601,13 @@ Intro
     -o-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
 }
+
 .home-btn:hover span {
     opacity: 1;
     width: 100px;
     right: 20px;
 }
+
 .resume-btn {
     border-radius: 4px;
     margin-bottom: 20px;
@@ -609,15 +618,18 @@ Intro
     background-color: #00b39f;
     text-transform: uppercase;
 }
+
 .resume-btn a {
     color: var(--color-white);
     display: block;
     padding: 0 15px 1px;
     line-height: 38px;
 }
+
 .resume-btn i {
     font-size: 1.1875em;
 }
+
 .resume-btn:hover {
     opacity: 1;
 }
@@ -939,8 +951,9 @@ About
 }
 
 /*#about .about-me .content {
-    margin-bottom: 30px;
-}*/
+margin-bottom: 30px;
+}
+*/
 .bottom-social {
     width: 100%;
     background: #fff;
@@ -1282,16 +1295,14 @@ h3.page-heading {
     border-color: #000;
     transform: scale3d(1.15, 1.15, 1.15);
     /*-webkit-transform: rotate(360deg);
-    transform: rotate(360deg);*/
+transform: rotate(360deg);*/
 }
-
 
 .features .feature .icon-container .icon {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 45%;
 }
-
 
 .features .feature.skills-icon.html5 .icon {
     color: #f46518;
@@ -1313,7 +1324,6 @@ h3.page-heading {
     color: #fff;
     background-color: #2ba6ff;
 }
-
 
 .features .feature.skills-icon.sass .icon {
     color: #cf649a;
@@ -1412,7 +1422,6 @@ h3.page-heading {
     background-image: url(../images/icons/bootstrap-logo-hover.svg);
 }
 
-
 .features .feature.skills-icon.react .icon {
     color: #61dafb;
     border-color: #61dafb;
@@ -1435,10 +1444,6 @@ h3.page-heading {
     color: #fff;
     background-color: #a4c82b;
 }
-
-
-
-
 
 .features .feature.skills-icon.wordpress .icon {
     color: #12a5d7;
@@ -1465,93 +1470,86 @@ h3.page-heading {
 }
 
 /*.features-left .feature.skills-icon:first-child .icon {
-    color: #f46518;
-    border-color: #f46518
+color: #f46518;
+border-color: #f46518
 }
 .features-left .feature.skills-icon:hover:first-child .icon {
-    background-color: #f46518;
-    color: #fff
+background-color: #f46518;
+color: #fff
 }
 .features-left .feature.skills-icon:nth-child(2) .icon {
-    color: #2ba6ff;
-    border-color: #2ba6ff
+color: #2ba6ff;
+border-color: #2ba6ff
 }
-
 .features-left .feature.skills-icon:hover:nth-child(2) .icon {
-    background-color: #2ba6ff;
-    color: #fff
+background-color: #2ba6ff;
+color: #fff
 }
-
 .features-left .feature.skills-icon:nth-child(3) .icon {
-    color: #c6538c;
-    border-color: #c6538c
+color: #c6538c;
+border-color: #c6538c
 }
-
 .features-left .feature.skills-icon:hover:nth-child(3) .icon {
-    background-color: #c6538c;
-    color: #fff
+background-color: #c6538c;
+color: #fff
 }
-
 .features-left .feature.skills-icon:nth-child(4) .icon {
-    color: #1f1f1f;
-    border-color: #1f1f1f
+color: #1f1f1f;
+border-color: #1f1f1f
 }
-
 .features-left .feature.skills-icon:hover:nth-child(4) .icon {
-    background-color: #1f1f1f;
-    color: #fff
+background-color: #1f1f1f;
+color: #fff
 }
-
 .features-left .feature.skills-icon:nth-child(5) .icon {
-    color: #0d98d6;
-    border-color: #0d98d6
+color: #0d98d6;
+border-color: #0d98d6
 }
 .features-left .feature.skills-icon:hover:nth-child(5) .icon {
-    background-color: #0d98d6;
-    color: #fff
+background-color: #0d98d6;
+color: #fff
 }
 .features-right .feature.skills-icon:first-child .icon {
-    color: #a4c82b;
-    border-color: #a4c82b
+color: #a4c82b;
+border-color: #a4c82b
 }
 .features-right .feature.skills-icon:hover:first-child .icon {
-    background-color: #a4c82b;
-    color: #fff
+background-color: #a4c82b;
+color: #fff
 }
 .features-right .feature.skills-icon:nth-child(2) .icon {
-    color: #0072c1;
-    border-color: #0072c1
+color: #0072c1;
+border-color: #0072c1
 }
 .features-right .feature.skills-icon:hover:nth-child(2) .icon {
-    background-color: #0072c1;
-    color: #fff
+background-color: #0072c1;
+color: #fff
 }
 .features-right .feature.skills-icon:nth-child(3) .icon {
-    color: #1d365d;
-    border-color: #1d365d
+color: #1d365d;
+border-color: #1d365d
 }
 .features-right .feature.skills-icon:hover:nth-child(3) .icon {
-    background-color: #1d365d;
-    color: #fff
+background-color: #1d365d;
+color: #fff
 }
 .features-right .feature.skills-icon:nth-child(4) .icon {
-    color: #583980;
-    border-color: #583980
+color: #583980;
+border-color: #583980
 }
 .features-right .feature.skills-icon:hover:nth-child(4) .icon {
-    background-color: #583980;
-    color: #fff
+background-color: #583980;
+color: #fff
 }
 .features-right .feature.skills-icon:nth-child(5) .icon {
-    color: #fe8f1b;
-    border-color: #fe8f1b
+color: #fe8f1b;
+border-color: #fe8f1b
 }
 .features-right .feature.skills-icon:hover:nth-child(5) .icon {
-    background-color: #fe8f1b;
-    color: #fff
-}*/
-
-
+background-color: #fe8f1b;
+color: #fff
+}
+*/
 .features .phone-image {
     margin: 30px auto 0;
     width: 90%
@@ -1887,7 +1885,6 @@ h3.page-heading {
 /* ==================================================================
 Portfolio
 ================================================================== */
-
 #portfolio {}
 
 .portfolio-filter {
@@ -2131,7 +2128,6 @@ a.view-port:hover {
 /* ==================================================================
 Contacts
 ================================================================== */
-
 #contacts {
     /*background: url(../images/google-map.jpg) no-repeat center center;*/
     background-image: url(../images/google-map.jpg);
@@ -2361,7 +2357,6 @@ form.contact-form textarea {
 |* Media Queries
 |* ------------------------------------------------------------ *|
 \* ------------------------------------------------------------ */
-
 @media only screen and (max-width: 1440px) {
     .container.port-wide .port-bar-image {
         margin-top: -26%;
@@ -2423,7 +2418,6 @@ form.contact-form textarea {
     #about .content-box .content {
         width: 85%;
     }
-
 }
 
 @media only screen and (min-width: 767px) and (max-width: 959px) {
@@ -2477,7 +2471,6 @@ form.contact-form textarea {
     body {
         overflow: visible;
     }
-
     section {
         width: 100%;
         height: 100%;
@@ -2487,36 +2480,34 @@ form.contact-form textarea {
         background: #f2f2f2;
         float: left;
     }
-
     section .container {
         padding-top: 40px;
         padding-bottom: 40px;
     }
-
     section>.container {
         padding-bottom: 40px;
     }
-
-
+    .about-me .container {
+        max-width: 640px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     nav#main-nav {
         height: auto;
     }
 
     nav#main-nav>ul {
         display: none;
-        /*background: #00b39f;*/
         background: #333;
         width: 100%;
         height: auto;
         margin-right: 0px;
     }
-
     nav#main-nav>ul li {
         width: 100%;
         float: left;
         position: relative;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
     }
 
     #main-nav ul li a span {
@@ -2530,7 +2521,6 @@ form.contact-form textarea {
     nav#main-nav>ul li:hover {
         background-color: #00b39f
     }
-
 
     nav#main-nav>ul li a {
         color: #fff;
@@ -2555,9 +2545,6 @@ form.contact-form textarea {
     #main-nav #menu-icon {
         display: block;
     }
-
-
-
 
     #intro .header {
         display: none;
@@ -2591,12 +2578,6 @@ form.contact-form textarea {
     #intro .container {
         padding-top: 50px;
     }
-
-    #about .about-me {
-        /*padding-bottom: 130px;*/
-        font-size: 30px
-    }
-
     .section-banner {
         margin-top: 0;
         height: auto
@@ -2673,7 +2654,8 @@ form.contact-form textarea {
     .copyright {
         padding-top: 20px;
         text-align: center;
-        color: #ccc
+        color: #ccc;
+        line-height: 100%;
     }
 
     .sep-banner {
@@ -2682,7 +2664,6 @@ form.contact-form textarea {
         line-height: 30px;
         height: 140px
     }
-
 
     .timeline-post-left .timeline-post:first-child {
         margin-top: 20px;
@@ -2726,7 +2707,6 @@ form.contact-form textarea {
         padding-bottom: 30px;
     }
 
-
     .features .feature-box .box-content {
         margin-bottom: 30px;
     }
@@ -2734,7 +2714,6 @@ form.contact-form textarea {
     .features-list {
         margin-bottom: 30px;
     }
-
 
     .features .feature.skills-icon {
         border-bottom: 1px #eee solid;
@@ -2760,8 +2739,6 @@ form.contact-form textarea {
         min-height: 200px;
     }
 
-
-
     .timeline-post-left,
     .timeline-post-right {
         width: 100%;
@@ -2786,7 +2763,6 @@ form.contact-form textarea {
         font-weight: 300
     }
 
-
     .single-portfolio .portfolio-close {
         top: 10px;
         right: 12px;
@@ -2801,8 +2777,12 @@ form.contact-form textarea {
         margin-top: 0;
         padding: 15px 0
     }
-
-
+    .portfolio .portfolio-item {
+        height: auto;
+    }
+    .portfolio .portfolio-item img {
+        width: 100%
+    }
 
     #portfolio {
         overflow: hidden;
@@ -2836,7 +2816,6 @@ form.contact-form textarea {
 }
 
 @media only screen and (max-width: 639px) {
-
     #intro .caption {
         padding: 100px 20px 50px;
         letter-spacing: 1px
@@ -2898,40 +2877,94 @@ form.contact-form textarea {
     #about .content-box .content {
         width: 90%;
     }
-
 }
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    .container {
-        width: 460px;
-    }
-
-    .portfolio .portfolio-item {
-        height: 300px;
-    }
-}
-
 @media only screen and (max-width: 479px) {
+    #intro .caption {
+        padding: 70px 20px 30px;
+    }
+    #main-nav #menu-icon {
+        width: 50px;
+        height: 44px;
+        line-height: 44px;
+        padding-top: 3px;
+    }
+    #main-nav #menu-icon i {
+        font-size: 22px;;
+    }
+    #main-nav .logo-icon {
+        width: 50px;
+        height: 44px;
+        line-height: 46px;
+        text-align: center;
+    }
+    #main-nav .logo-icon i {
+        font-size: 24px;
+    }
     .container {
         width: 300px;
     }
-
-    .portfolio .portfolio-item {
-        height: 196px;
+    #intro .caption h1 {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 0;
+    }
+    #intro .caption p.sep {
+        margin: 0 0 8px;
+        letter-spacing: 0.5px;
+        font-size: 11px;
+    }
+    #intro .caption h3 {
+        font-size: 17px;
+        /*padding: 0 0 10px;*/
+        margin: 0;
+        letter-spacing: 1.5px;
+    }
+    .resume-btn a {
+        font-size: 12px;
+        line-height: 32px;
+        letter-spacing: 0.5px;
     }
 
+    section .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container {
+        width: 300px;
+    }
+    .about-me .container {
+        max-width: 100%;
+        width: 100%;
+    }
+    .section-banner .content {
+        padding: 20px 20px 10px;
+        font-size: 18px;
+    }
+    h2.section_title_drakgray {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    h2.section_title_drakgray,
+    h2.section_title_drakgray.about {
+        background: none;
+    }
     #about .about-me {
-        /*padding-bottom: 100px;*/
-        font-size: 22px
+        font-size: 18px;
+        text-align: justify;
     }
-
     #about .about-banner,
     #skills .about-banner {
         font-size: 22px;
         line-height: 24px;
         padding: 30px 20px;
     }
-
+    #about h2.section_title_drakgray {
+        margin: 0;
+        text-align: left;
+    }
+    #about .about-me span.about-btn {
+        display: none;
+    }
     .sep-banner {
         padding: 30px 0;
         font-size: 24px;
@@ -2943,11 +2976,6 @@ form.contact-form textarea {
     .designation .span6 .developer .text h2 {
         font-size: 38px;
     }
-
-    .container {
-        width: 300px;
-    }
-
     .portfolio .portfolio-item {
         height: 196px;
     }
