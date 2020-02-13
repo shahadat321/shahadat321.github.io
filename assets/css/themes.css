@@ -438,7 +438,7 @@ Intro
     line-height: 60px;
     background: #00b39f;
     float: left;
-    padding-top: 3px;
+    /*padding-top: 3px;*/
 }
 
 #intro .header .left .logo-icon i {
