@@ -1,0 +1,63 @@
+/*_mixins.scss */
+
+/* Layout */
+@mixin layout-lg {
+  @media only screen and (max-width: $layout-size-lg) {
+    @content;
+  }
+}
+
+@mixin layout-md {
+  @media only screen and (max-width: $layout-size-md) {
+    @content;
+  }
+}
+
+@mixin layout-sm {
+  @media only screen and (max-width: $layout-size-sm) {
+    @content;
+  }
+}
+
+/*
+Media queries currently in use:
+$screen-xs:479px;
+$screen-sm:767px;
+$screen-md:959px;
+$screen-lg:1199px;
+*/
+
+/* Animation */
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
