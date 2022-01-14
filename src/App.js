@@ -1,26 +1,23 @@
-import Header from './Components/Header/Header.jsx';
-import Banner from './Components/Hero/Banner.jsx';
-import About from './Components/About/About.jsx';
-import Portfolio from './Components/Portfolio/Portfolio.jsx';
-import Experience from './Components/Experience/Experience.jsx';
-import Section from './Components/Section/Section.jsx';
-import Contact from './Components/Contact/Contact.jsx'
-
-
+import Header from './Components/Header';
+import Banner from './Components/Banner';
+import About from './Components/About';
+import Portfolio from './Components/Portfolio';
+import Experience from './Components/Experience';
+import Contact from './Components/Contact';
+import { Controller } from "react-scrollmagic";
 import './App.scss';
 
 function App() {
   return (
     <div className="app">
-      <Header />
-      <Banner />
-      <About />
-      <Portfolio />
-      <Experience />
-
-      {/* <Section /> */}
-
-      <Contact />
+      <Controller>
+        <Header />
+        <Banner />
+        <About />
+        <Portfolio />
+        <Experience />
+        <Contact />
+      </Controller>
     </div>
   );
 }

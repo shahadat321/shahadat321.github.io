@@ -1,16 +1,13 @@
 // @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 
-/*_variables.scss */
-
 /* Layout */
 $screen-xs: 575px;
-$screen-sm: 767px;
-$screen-md: 991px;
-$screen-lg: 1199px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1024px;
+$screen-xl: 1200px;
 
 /* Typography */
-// $font-stack-body: 'Poppins', sans-serif;
-// $font-stack-heading: 'Poppins', sans-serif;
 $font-stack-body: sans-serif;
 $font-stack-heading: sans-serif;
 $line-height-base: 1.45;
@@ -32,24 +29,6 @@ $font-weight-semi: 600;
 $font-weight-bold: 700;
 $font-weight-heading: 800;
 
-/* Colors */
-$base-color: #555555;
-
-$primary-color: #ff4229;
-$secondary-color: #196AC8;
-
-$color-white: #ffffff;
-$color-black: #000000;
-
-$color-red: red;
-
-$color-light: #ffffff;
-$color-dark: #000000;
-
-$color-green: #42a047;
-$color-red: #dc3545;
-$color-blue: #2196F3;
-
 // Grays
 $gray-darker:           lighten(#000, 13.5%) !default; // #222
 $gray-dark:             lighten(#000, 20%) !default;   // #333
@@ -57,3 +36,16 @@ $gray:                  lighten(#000, 33.5%) !default; // #555
 $gray-light:            lighten(#000, 50%) !default;   // #999
 $gray-lighter:          lighten(#000, 80%) !default; // #ccc
 $gray-lightest:         lighten(#000, 90%) !default; // #eee
+
+/* Colors */
+$base-color: #373b40;
+
+$primary-color: #64ffda;
+$secondary-color: #196AC8;
+
+$color-light: #8892b0;
+$color-dark: #0a192f;
+
+$color-text-light: #8892b0;
+$color-text-lighten: #ccd6f6;
+$color-text-dark: #0a192f;
