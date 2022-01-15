@@ -11,7 +11,7 @@ class Portfolio extends Component{
                             <Scene classToggle="fade-up" reverse={true} offset={-300}>
                                 <div className="work-fluid--item hover-effect fade-effect">
                                     <a href="https://pdfsimpli.com/" target="_blank" rel="noreferrer nofollow">
-                                        <img src="./images/port-1.jpg" alt="" />
+                                        <img src="./images/port-1.jpg" loading="lazy" alt="" />
                                         <div className="work-overlay">
                                             <div className="work-overlay--content">
                                                 <h5 className="work-item--text item-title">PDFSimpli</h5>
@@ -29,7 +29,7 @@ class Portfolio extends Component{
                                 <div className="work-half--item fade-effect">
                                     <div className="hover-effect">
                                         <a href="https://www.thequint.com/" target="_blank" rel="noreferrer nofollow">
-                                            <img src="./images/port-2.jpg" alt="" />
+                                            <img src="./images/port-2.jpg" loading="lazy" alt="" />
                                             <div className="work-overlay">
                                                 <div className="work-overlay--content">
                                                     <h4 className="work-item--text item-title">The Quint</h4>
@@ -46,7 +46,7 @@ class Portfolio extends Component{
                                 <div className="work-half--item fade-effect">
                                     <div className="hover-effect">
                                         <a href="https://care4life.com/" target="_blank" rel="noreferrer nofollow">
-                                            <img src="./images/port-3.jpg" alt="" />
+                                            <img src="./images/port-3.jpg" loading="lazy" alt="" />
                                             <div className="work-overlay">
                                                 <div className="work-overlay--content">
                                                     <h4 className="work-item--text item-title">Care4life</h4>
@@ -62,7 +62,7 @@ class Portfolio extends Component{
                                 <div className="work-half--item fade-effect">
                                     <div className="hover-effect">
                                         <a href="https://text4baby.org/" target="_blank" rel="noreferrer nofollow">
-                                            <img src="./images/port-4.jpg" alt="" />
+                                            <img src="./images/port-4.jpg" loading="lazy" alt="" />
                                             <div className="work-overlay">
                                                 <div className="work-overlay--content">
                                                     <h4 className="work-item--text item-title">Text4baby</h4>
@@ -78,7 +78,7 @@ class Portfolio extends Component{
                                 <div className="work-half--item fade-effect">
                                     <div className="hover-effect">
                                         <a href="https://www.thequint.com/quintlab/buri-ladki-game/" target="_blank" rel="noreferrer nofollow">
-                                            <img src="./images/port-5.jpg" alt="" />
+                                            <img src="./images/port-5.jpg" loading="lazy" alt="" />
                                             <div className="work-overlay">
                                                 <div className="work-overlay--content">
                                                     <h4 className="work-item--text item-title">Buri Ladki</h4>
@@ -95,7 +95,7 @@ class Portfolio extends Component{
                                 <div className="work-half--item fade-effect">
                                     <div className="hover-effect">
                                         <a href="https://braahmam.net/" target="_blank" rel="noreferrer nofollow">
-                                            <img src="./images/port-6.jpg" alt="" />
+                                            <img src="./images/port-6.jpg" loading="lazy" alt="" />
                                             <div className="work-overlay">
                                                 <div className="work-overlay--content">
                                                     <h4 className="work-item--text item-title">Braahmam</h4>
@@ -111,7 +111,7 @@ class Portfolio extends Component{
                                 <div className="work-half--item fade-effect">
                                     <div className="hover-effect">
                                         <a href="https://www.thequint.com/quintlab/sandesh-to-a-soldier/" target="_blank" rel="noreferrer nofollow">
-                                            <img src="./images/port-7.jpg" alt="" />
+                                            <img src="./images/port-7.jpg" loading="lazy" alt="" />
                                             <div className="work-overlay">
                                                 <div className="work-overlay--content">
                                                     <h4 className="work-item--text item-title">Sandesh to a Soldier - The Quint</h4>
@@ -127,7 +127,7 @@ class Portfolio extends Component{
                                 <div className="work-half--item fade-effect">
                                     <div className="hover-effect">
                                         <a href="https://www.thequint.com/quintlab/phone-life-balance/" target="_blank" rel="noreferrer nofollow">
-                                            <img src="./images/port-8.jpg" alt="" />
+                                            <img src="./images/port-8.jpg" loading="lazy" alt="" />
                                             <div className="work-overlay">
                                                 <div className="work-overlay--content">
                                                     <h4 className="work-item--text item-title">Motorola Partner - The Quint</h4>
@@ -143,7 +143,7 @@ class Portfolio extends Component{
                                 <div className="work-half--item fade-effect">
                                     <div className="hover-effect">
                                         <a href="https://www.thequint.com/quintlab/concept-of-consent/" target="_blank" rel="noreferrer nofollow">
-                                            <img src="./images/port-9.jpg" alt="" />
+                                            <img src="./images/port-9.jpg" loading="lazy" alt="" />
                                             <div className="work-overlay">
                                                 <div className="work-overlay--content">
                                                     <h4 className="work-item--text item-title">Concept of Consent - The Quint</h4>
@@ -160,7 +160,7 @@ class Portfolio extends Component{
                                 <div className="work-half--item fade-effect">
                                     <div className="hover-effect">
                                         <a href="https://webcircle.com.au/" target="_blank" rel="noreferrer nofollow">
-                                            <img src="./images/port-10.jpg" alt="" />
+                                            <img src="./images/port-10.jpg" loading="lazy" alt="" />
                                             <div className="work-overlay">
                                                 <div className="work-overlay--content">
                                                     <h4 className="work-item--text item-title">WebCircle.com.au</h4>
@@ -176,7 +176,7 @@ class Portfolio extends Component{
                                 <div className="work-half--item fade-effect">
                                     <div className="hover-effect">
                                         <a href="https://beyondtheorphanage.org/" target="_blank" rel="noreferrer nofollow">
-                                            <img src="./images/port-11.jpg" alt="" />
+                                            <img src="./images/port-11.jpg" loading="lazy" alt="" />
                                             <div className="work-overlay">
                                                 <div className="work-overlay--content">
                                                     <h4 className="work-item--text item-title">Beyond the Orphanage</h4>

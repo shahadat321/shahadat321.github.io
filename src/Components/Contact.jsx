@@ -39,7 +39,7 @@ class Contact extends Component{
                         <Scene classToggle="fade-up" reverse={true} offset={-350}>
                             <div className="contact-col contact--form fade-effect">
                                 <div className="contact-col--item item-fluid text-center">
-                                    <p className="contact-phone"><a href="https://wa.me/9910613200?text=Hi there,%20How%20are%20you%20doing?"> <img className="whatsapp-icon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Whatsapp2_colored_svg-1024.png" width='30' alt="" /> +91-99106132<span className="is-desktop">00</span><span className="animate-text tel"><b>...00</b></span></a></p>
+                                    <p className="contact-phone"><a href="https://wa.me/9910613200?text=Hi there,%20How%20are%20you%20doing?"> <img className="whatsapp-icon" src="./images/whatsapp.png" width="30" height="30" loading="lazy" alt="" /> +91-99106132<span className="is-desktop">00</span><span className="animate-text tel"><b>...00</b></span></a></p>
 
                                     <p className="contact-email"><a href="mailto:shahadat.rockstar@gmail.com">shahadat.rock<span className="is-desktop">star</span><span className="animate-text"><b>...star</b></span>@<span className="animate-text--last">gmail.com</span></a></p>
 
