@@ -347,7 +347,7 @@ body.nav-open {
                 font-family: 'Courier New', monospace;
                 // font-size: clamp(1rem, 2.5vw, 2rem);
                 color: $primary-color;
-                font-size: 1.125rem;
+                font-size: 1.25rem;
                 display: block;
                 letter-spacing: -0.75px;
                 -webkit-animation-delay: 0.1s;
@@ -361,11 +361,17 @@ body.nav-open {
                 }
             }
             h1 {
-                font-size: 1.6250rem;
+                font-size: 1.75rem;
                 color: $color-text-lighten;
                 font-weight: $font-weight-bold;
+                @media (min-width: 360px){
+                    font-size: 2rem;
+                }
                 @media (min-width: 420px){
-                    font-size: 2.0625rem;
+                    font-size: 2.3750rem;
+                }
+                @media (min-width: 480px){
+                    font-size: 2.5rem;
                 }
                 @media (min-width: $screen-xs){
                     font-size: 2.8750rem;
@@ -383,8 +389,14 @@ body.nav-open {
                 font-size: 1.6250rem;
                 color: $color-text-light;
                 letter-spacing: -0.95px;
+                @media (min-width: 360px){
+                    font-size: 1.8125rem;
+                }
                 @media (min-width: 420px){
-                    font-size: 2.0625rem;
+                    font-size: 2.125rem;
+                }
+                @media (min-width: 480px){
+                    font-size: 2.3750rem;
                 }
                 @media (min-width: $screen-xs){
                     font-size: 2.8750rem;
@@ -404,8 +416,12 @@ body.nav-open {
                 font-size: 1.3750rem;
                 font-weight: $font-weight-medium;
                 line-height: 120%;
-                @media (min-width: 420px){
-                    font-size: 1.75rem;
+                @media (min-width: 360px){
+                    font-size: 1.65rem;
+                    letter-spacing: -0.75px;
+                }
+                @media (min-width: 480px){
+                    font-size: 1.87rem;
                 }
                 @media (min-width: $screen-xs){
                     font-size: 2rem;
@@ -425,8 +441,8 @@ body.nav-open {
                 cursor: pointer;
                 display: block;
                 position: relative;
-                width: 24px;
-                height: 42px;
+                width: 28px;
+                height: 48px;
                 border-radius: 30px;
                 border: 1px solid $color-text-light;
                 opacity: 0;
@@ -437,10 +453,6 @@ body.nav-open {
                 -webkit-animation-delay: 1.5s;
                 -moz-animation-delay: 1.5s;
                 animation-delay: 1.5s;
-                @media (min-width: $screen-xs){
-                    width: 28px;
-                    height: 48px;
-                }
                 @media (min-width: $screen-sm){
                     width: 32px;
                     height: 54px;
@@ -449,18 +461,14 @@ body.nav-open {
                     content: "";
                     display: block;
                     position: absolute;
-                    top: 6px;
-                    left: 13px;
+                    top: 8px;
+                    left: 15px;
                     width: 2px;
                     height: 4px;
                     margin-left: -3px;
                     border-radius: 2px;
                     background-color: $color-text-light;
                     @include animation(scroll-mouse 1.5s infinite);
-                    @media (min-width: $screen-xs){
-                        top: 8px;
-                        left: 15px;
-                    }
                     @media (min-width: $screen-sm){
                         top: 12px;
                         left: 17px;
