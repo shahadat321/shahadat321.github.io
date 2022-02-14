@@ -900,6 +900,18 @@ body.nav-open {
                 margin: 0 auto;
                 display: flex;
                 flex-wrap: wrap;
+                .submit-message {
+                    height: 30px;
+                    width: 100%;
+                    font-size: 1.25rem;
+                    text-align: center;
+                    .success-message {
+                        color: $primary-color;
+                    }
+                    .error-message {
+                        color: #e72626;
+                    }
+                }
             }
         }
         &--item {
@@ -1108,8 +1120,11 @@ body.nav-open {
             position: absolute;
             width: 100%;
             background-color: $color-text-light;
-            @include animation(hide-effect .5s ease-in-out forwards running);
-            @include transition(transform .375s ease-in-out, width .5s ease-in-out, opacity 1s);
+            // @include animation(hide-effect .5s ease-in-out forwards running);
+            // @include transition(transform .375s ease-in-out, width .5s ease-in-out, opacity 1s);
+
+            @include animation(anchor-underline .5s ease-in-out forwards running);
+            @include transition(transform .375s ease-in-out,width .5s ease-in-out,opacity 1s);
         }
         &:hover {
             .animate-text {
@@ -1127,8 +1142,10 @@ body.nav-open {
             }
             &::after {
                 opacity: 0.6;
-                @include animation(hide-effect .5s ease-in-out forwards running);
-                @include transition(transform .375s ease-in-out, width .5s ease-in-out, opacity .5s);
+                // @include animation(hide-effect .5s ease-in-out forwards running);
+                // @include transition(transform .375s ease-in-out, width .5s ease-in-out, opacity .5s);
+                @include animation(anchor-hover-underline .5s ease-in-out forwards running);
+                @include transition(transform .375s ease-in-out,width .5s ease-in-out,opacity .5s);
             }
         }
     }

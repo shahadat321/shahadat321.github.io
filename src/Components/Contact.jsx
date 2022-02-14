@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Scene } from "react-scrollmagic";
 
 class Contact extends Component{
-    state = {error: null}
+    state = {error: null, success: null}
     onSubmit = (e) => {
         e.preventDefault();
         fetch(
@@ -11,12 +11,26 @@ class Contact extends Component{
         )
         .then((response) => {
             console.log("Thanks your feedback!");
+            this.setState({
+                success: "Thanks your feedback!",
+            });
+            setTimeout(() => {
+                this.setState({
+                    success: null
+                });
+            }, 3000);
             e.target.reset();
         })
         .catch((error) => {
             this.setState({
-                error: error.message
-            })
+                // error: error.message,
+                error: "All fields are mandatory"
+            });
+            setTimeout(() => {
+                this.setState({
+                    error: null
+                });
+            }, 3000);
         });
     };
 
@@ -52,8 +66,14 @@ class Contact extends Component{
                                             <label className="form-label">Feedback</label>
                                         </div>
                                     </div>
-                                    {/* <div className="" >{this.state.error}</div> */}
+
                                     <div className="contact-col--item item-fluid text-center"><button className="btn btn-primary" type="submit">Submit</button></div>
+                                    
+                                    <div className="submit-message">
+                                        <span className="error-message">{this.state.error}</span>
+                                        <span className="success-message">{this.state.success}</span>
+                                    </div>
+
                                 </form>
                             </div>
                         </Scene>
