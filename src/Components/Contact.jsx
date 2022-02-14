@@ -2,6 +2,24 @@ import React, { Component } from "react";
 import { Scene } from "react-scrollmagic";
 
 class Contact extends Component{
+    state = {error: null}
+    onSubmit = (e) => {
+        e.preventDefault();
+        fetch(
+          "https://script.google.com/macros/s/AKfycbw31RppvJmmR-jHf3hS9BhtAcLVlL8FHqDs-mMeE10khROwvg/exec",
+          { method: "POST", body: new FormData(e.currentTarget) }
+        )
+        .then((response) => {
+            console.log("Thanks your feedback!");
+            e.target.reset();
+        })
+        .catch((error) => {
+            this.setState({
+                error: error.message
+            })
+        });
+    };
+
     render(){
         return(
             <section id="contact" className="section section--dark section--contact chunk--see-more">
@@ -15,25 +33,28 @@ class Contact extends Component{
                         </Scene>
                         <Scene classToggle="fade-up" reverse={true} offset={-200}>
                             <div className="contact-col contact--form fade-effect">
-                                <div className="contact-col--item">
-                                    <div className="form-group">
-                                        <input id="name" className="form-control" type="text" placeholder=" " />
-                                        <label className="form-label">Name</label>
+                                <form onSubmit={this.onSubmit} className="form-wrap">
+                                    <div className="contact-col--item">
+                                        <div className="form-group">
+                                            <input id="name" name="name" className="form-control" type="text" placeholder=" " required />
+                                            <label className="form-label">Name</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="contact-col--item">
-                                    <div className="form-group">
-                                        <input id="email" className="form-control" type="text" placeholder=" " />
-                                        <label className="form-label">Email</label>
+                                    <div className="contact-col--item">
+                                        <div className="form-group">
+                                            <input id="email" name="email" className="form-control" type="email" placeholder=" " required />
+                                            <label className="form-label">Email</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="contact-col--item item-fluid">
-                                    <div className="form-group">
-                                        <textarea id="comments" className="form-control form-control--textarea" placeholder=" "></textarea>
-                                        <label className="form-label">Feedback</label>
+                                    <div className="contact-col--item item-fluid">
+                                        <div className="form-group">
+                                            <textarea id="feedback" name="comment" className="form-control form-control--textarea" placeholder=" " required></textarea>
+                                            <label className="form-label">Feedback</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="contact-col--item item-fluid text-center"><button className="btn btn-primary">Submit</button></div>
+                                    {/* <div className="" >{this.state.error}</div> */}
+                                    <div className="contact-col--item item-fluid text-center"><button className="btn btn-primary" type="submit">Submit</button></div>
+                                </form>
                             </div>
                         </Scene>
                         <Scene classToggle="fade-up" reverse={true} offset={-350}>
