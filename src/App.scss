@@ -893,9 +893,6 @@ body.nav-open {
             @media (min-width: $screen-sm){
                 margin-bottom: 30px;
             }
-            @media (min-width: $screen-md){
-                margin-bottom: 50px;
-            }
             .form-wrap {
                 margin: 0 auto;
                 display: flex;
@@ -1002,14 +999,17 @@ body.nav-open {
             font-size: 40px;
         }
         .whatsapp-icon {
-            max-width: 22px;
+            width: 22px;
+            height: 22px;
             margin-bottom: -1px;
             margin-right: 0;
             @media (min-width: $screen-sm){
-                max-width: 25px;
+                width: 25px;
+                height: 25px;
             }
             @media (min-width: $screen-md){
-                max-width: 30px;
+                width: 30px;
+                height: 30px;
                 margin-right: 5px;
             }
         }
@@ -1017,7 +1017,7 @@ body.nav-open {
     .contact-email {
         font-size: 28px;
         line-height: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 7rem;
         a {
             line-height: 28px;
         }
@@ -1029,7 +1029,7 @@ body.nav-open {
         }
     }
     .contact-social {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         a {
             margin: 0 5px;
             font-size: 16px;
