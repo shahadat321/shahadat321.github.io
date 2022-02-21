@@ -11,7 +11,7 @@ class Portfolio extends Component{
                             <Scene classToggle="fade-up" reverse={true} offset={-300}>
                                 <div className="work-fluid--item hover-effect fade-effect">
                                     <a href="https://pdfsimpli.com/" target="_blank" rel="noreferrer nofollow">
-                                        <img src="./images/port-1.jpg" loading="lazy" alt="" />
+                                        <img src="./images/port-1.webp" loading="lazy" alt="" />
                                         <div className="work-overlay">
                                             <div className="work-overlay--content">
                                                 <h5 className="work-item--text item-title">PDFSimpli.com</h5>
