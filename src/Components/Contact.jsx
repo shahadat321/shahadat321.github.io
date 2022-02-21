@@ -77,7 +77,7 @@ class Contact extends Component{
                                 </form>
                             </div>
                         </Scene>
-                        <Scene classToggle="fade-up" reverse={true} offset={-350}>
+                        <Scene classToggle="fade-up" reverse={true} offset={-500}>
                             <div className="contact-col contact--form fade-effect">
                                 <div className="contact-col--item item-fluid text-center">
                                     <p className="contact-phone"><a href="https://wa.me/919910613200?text=Hi%20there,%20How%20are%20you%20doing?"> <img className="whatsapp-icon" src="./images/whatsapp.png" width="30" height="30" loading="lazy" alt="" /> +91-99106132<span className="is-desktop">00</span><span className="animate-text tel"><b>...00</b></span></a></p>
