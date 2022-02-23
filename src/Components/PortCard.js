@@ -11,8 +11,9 @@ class PortCard extends Component{
                             <figure>
                                 <picture>
                                     <source type="image/webp" srcSet={this.props.imgWEBP} />
-                                    <source type="image/jpeg" srcSet={this.props.imgAVIF} />
-                                    <img src={this.props.imgJPG} />
+                                    <source type="image/avif" srcSet={this.props.imgAVIF} />
+                                    <source type="image/jpeg" srcSet={this.props.imgJPG} />
+                                    <img decoding="async" loading="lazy" src={this.props.imgJPG} alt="Portfolio" />
                                 </picture>
                                 <figcaption className="work-overlay">
                                     <div className="work-overlay--content">
