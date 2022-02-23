@@ -23,7 +23,7 @@ body {
     font-weight: $font-weight-light;
     line-height: $line-height-base;
     @media (min-width: $screen-xxxl){
-        font-size: 112%;
+        font-size: 110%;
     }
 }
 p,
@@ -361,6 +361,9 @@ body.nav-open {
             content: "";
             // max-width: 60%;
             transform: translateY(-50%);
+            @media (min-width: $screen-xxxl){
+                top: 45%;
+            }
             h1, h2, h3, .tag-line {
                 margin: 0 0 0.5rem;
                 padding: 0;
@@ -373,7 +376,6 @@ body.nav-open {
             }
             .tag-line {
                 font-family: 'Courier New', monospace;
-                // font-size: clamp(1rem, 2.5vw, 2rem);
                 color: $primary-color;
                 font-size: 1.25rem;
                 display: block;
@@ -411,7 +413,7 @@ body.nav-open {
                     font-size: 3.25rem;
                 }
                 @media (min-width: $screen-xxxl){
-                    font-size: clamp(3.5rem, 3vw, 3.75rem);
+                    font-size: clamp(3.5rem, 3vw, 4rem);
                 }
                 &.main-headline {
                     -webkit-animation-delay: 0.3s;
@@ -440,7 +442,7 @@ body.nav-open {
                 }
                 @media (min-width: $screen-xxxl){
                     margin: 0 0 1rem;
-                    font-size: clamp(3.5rem, 3vw, 3.75rem);
+                    font-size: clamp(3.5rem, 3vw, 3.9375rem);
                 }
                 &.sub-headline {
                     -webkit-animation-delay: 0.5s;
@@ -469,7 +471,7 @@ body.nav-open {
                     margin-bottom: 2rem;
                 }
                 @media (min-width: $screen-xxl){
-                    font-size: clamp(2.5rem, 3vw, 2.75rem);
+                    font-size: clamp(2.5rem, 3vw, 2.8750rem);
                 }
                 span {
                     @media (min-width: 639px){
@@ -690,6 +692,10 @@ body.nav-open {
         margin-left: -15px;
         margin-right: -15px;
         padding-bottom: 50px;
+        @media (min-width: $screen-xxxl){
+            margin-left: -20px;
+            margin-right: -20px;
+        }
         &--item {
             width: 100%;
             padding-right: 15px;
@@ -697,6 +703,14 @@ body.nav-open {
             margin-bottom: 30px;
             @media (min-width: $screen-xs){
                 width: 50%;
+            }
+            @media (min-width: $screen-xxxl){
+                padding-right: 20px;
+                padding-left: 20px;
+                margin-bottom: 40px;
+            }
+            &:first-child {
+                width: 100%;
             }
         }
     }
@@ -710,6 +724,10 @@ body.nav-open {
             text-decoration: none;
             @media (min-width: $screen-lg){
                 color: $color-text-light;
+            }
+            figure {
+                margin: 0;
+                display: block;
             }
             .work-overlay {
                 @media (min-width: $screen-lg){
@@ -752,10 +770,10 @@ body.nav-open {
                         }
                     }
                     .item-title {
-                        font-size: 0.75rem;
+                        font-size: 0.9375rem;
                         margin-bottom: 0.125rem;
                         @media (min-width: $screen-sm){
-                            font-size: 0.8750rem;
+                            font-size: 0.9375rem;
                             margin-bottom: 0.25rem;
                         }
                         @media (min-width: $screen-lg){
@@ -769,12 +787,11 @@ body.nav-open {
                         line-height: 125%;
                         font-weight: $font-weight-medium;
                         @media (min-width: $screen-sm){
-                            font-size: 1rem;
-                            font-weight: $font-weight-semi;
+                            font-size: 0.9375rem;
                         }
                         @media (min-width: $screen-lg){
                             margin-bottom: 1.125rem;
-                            font-size: 1.25rem;
+                            font-size: 1.125rem;
                             font-weight: $font-weight-semi;
                         }
                     }
@@ -910,6 +927,16 @@ body.nav-open {
             p {
                 line-height: 1.5rem;
                 margin-bottom: 0.5rem;
+                &.company-name {
+                    margin-bottom: 0;
+                    line-height: 1.125rem;
+                }
+                &.product {
+                    opacity: 0.9;
+                    font-size: 0.8rem;
+                    font-style: italic;
+                    margin-bottom: 0.125rem;
+                }
                 &.small {
                     opacity: 0.9;
                     font-size: 0.8750rem;

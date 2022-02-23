@@ -26,7 +26,8 @@ class Experience extends Component{
                                     <p className="exp-number">02</p>
                                     <h6>Dec 2015 - Jun 2019</h6>
                                     <h5>Sr. Front End Developer</h5>
-                                    <p><a href="https://indecomm.com/" target="_blank" rel="noreferrer nofollow">Indecomm Global Services Pvt. Ltd.</a></p>
+                                    <p className="company-name"><a href="https://indecomm.com/" target="_blank" rel="noreferrer nofollow">Indecomm Global Services Pvt. Ltd.</a></p>
+                                    <p className="product">Product: Quint Digital Media Limited</p>
                                     <p className="small"><strong>Technology:</strong> HTML5, CSS3, SCSS/SASS, JavaScript, React, JSON, Google API, Bootstrap and GitHub.</p>
                                 </div>
                             </Scene>
