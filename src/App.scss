@@ -1387,10 +1387,7 @@ body.nav-open {
         }
     }
     .site-nominee {
-        margin-bottom: 30px;
-        @media (min-width: $screen-sm){
-            margin-bottom: 50px;
-        }
+        margin-bottom: 50px;
         a {
             line-height: 100%;
             span {

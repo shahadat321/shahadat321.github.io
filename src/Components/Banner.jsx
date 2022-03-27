@@ -12,7 +12,7 @@ class Banner extends Component {
                             {/* <h1 className="main-headline">What was Impossible Technology makes Possible.</h1> */}
                             <h2 className="sub-headline">I'm a front-end developer.</h2>
                             <h3 className="hero-content">I build interactive website that run across <span>platforms &amp; devices.</span></h3>
-                            <a className="scroll-mouse" href="#about"><span>Scroll Mouse</span></a>
+                            <a className="scroll-mouse" href="#about" aria-label="UILab.in"><span>Scroll Mouse</span></a>
                         </div>
                     </div>
                 </div>

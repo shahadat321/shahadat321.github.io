@@ -5,9 +5,11 @@ class Contact extends Component{
     state = {error: null, success: null}
     onSubmit = (e) => {
         e.preventDefault();
-        fetch(
-          "https://script.google.com/macros/s/AKfycbw31RppvJmmR-jHf3hS9BhtAcLVlL8FHqDs-mMeE10khROwvg/exec",
-          { method: "POST", body: new FormData(e.currentTarget) }
+        fetch("https://script.google.com/macros/s/AKfycbw31RppvJmmR-jHf3hS9BhtAcLVlL8FHqDs-mMeE10khROwvg/exec",
+        { 
+            method: "POST", 
+            body: new FormData(e.currentTarget) 
+        }
         )
         .then((response) => {
             console.log("Thanks your feedback!");
@@ -50,20 +52,20 @@ class Contact extends Component{
                                 <form onSubmit={this.onSubmit} className="form-wrap">
                                     <div className="contact-col--item">
                                         <div className="form-group">
+                                            <label for="name" className="form-label">Name</label>
                                             <input id="name" name="name" className="form-control" type="text" placeholder=" " required />
-                                            <label className="form-label">Name</label>
                                         </div>
                                     </div>
                                     <div className="contact-col--item">
                                         <div className="form-group">
+                                            <label for="email" className="form-label">Email</label>
                                             <input id="email" name="email" className="form-control" type="email" placeholder=" " required />
-                                            <label className="form-label">Email</label>
                                         </div>
                                     </div>
                                     <div className="contact-col--item item-fluid">
                                         <div className="form-group">
-                                            <textarea id="feedback" name="comment" className="form-control form-control--textarea" placeholder=" " required></textarea>
-                                            <label className="form-label">Feedback</label>
+                                            <label for="comment" className="form-label">Feedback</label>
+                                            <textarea id="comment" name="comment" className="form-control form-control--textarea" placeholder=" " required></textarea>
                                         </div>
                                     </div>
 
