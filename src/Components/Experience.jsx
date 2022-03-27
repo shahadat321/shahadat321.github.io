@@ -69,11 +69,25 @@ class Experience extends Component{
                                 </div>
                             </Scene>
                         </div>
-                        <Scene classToggle="scroll-left" reverse={true} offset={-200}>
+                        {/* <Scene classToggle="scroll-left" reverse={true} offset={-200}>
                             <div className="text-center fade-left">
                                 <a className="link--arrow link--light" href="https://www.linkedin.com/in/shahadat-hussain-97256988/"><span>Know more about me</span></a>
                             </div>
+                        </Scene> */}
+
+                        <Scene classToggle="fade-up" reverse={true} offset={-200}>
+                            <div className="text-center fade-effect">
+                                {/* <a href="#portfolio" className="btn btn-primary">View all work</a>
+                                <div className="btn-group"><a href="" className="btn-pixels">View all work</a></div> */}
+                                <div className="btn-effect">
+                                    <div className="btn-effect-point">
+                                        <a href="https://www.linkedin.com/in/shahadat-hussain-97256988/" className="btn-effect-link"><span>Know more about me</span></a>
+                                    </div>
+                                </div>
+                            </div>
                         </Scene>
+
+
                     </div>
                 </div>
             </section>

@@ -67,11 +67,25 @@ class Contact extends Component{
                                         </div>
                                     </div>
 
-                                    <div className="contact-col--item item-fluid text-center"><button className="btn btn-primary" type="submit">Submit</button></div>
+                                    <div className="contact-col--item item-fluid text-center">
+                                        {/* <button className="btn btn-primary" type="submit">Submit</button> */}
+                                        <div className="btn-effect">
+                                            <div className="btn-effect-point">
+                                                <button className="btn-effect-link" type="submit"><span>Submit</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
                                     
-                                    <div className="submit-message">
+                                    <span className="submit-message">
                                         <span className="error-message">{this.state.error}</span>
                                         <span className="success-message">{this.state.success}</span>
+                                    </span>
+
+                                    <div className="contact-col--item item-fluid text-center site-nominee">
+                                        <a href="https://www.csswinner.com/details/shahadat-hussain-frontend-developer/15939" target="_blank" rel="noreferrer">
+                                            <span>Site of the day nominated in:</span>
+                                            <img decoding="async" loading="lazy" src="/images/nominee-white-2.png" alt="Site of the day CSS Winner" title="Site of the day CSS Winner" />
+                                        </a>
                                     </div>
 
                                 </form>

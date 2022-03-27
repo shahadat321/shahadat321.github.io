@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Scene } from "react-scrollmagic";
 import Port from "./PortAPI";
 import PortCard from "./PortCard";
@@ -15,7 +15,15 @@ class Portfolio extends Component{
                         </div>
 
                         <Scene classToggle="fade-up" reverse={true} offset={-300}>
-                            <div className="text-center fade-effect"><a href="#portfolio" className="btn btn-primary">View all work</a></div>
+                            <div className="text-center fade-effect">
+                                {/* <a href="#portfolio" className="btn btn-primary">View all work</a>
+                                <div className="btn-group"><a href="" className="btn-pixels">View all work</a></div> */}
+                                <div className="btn-effect">
+                                    <div className="btn-effect-point">
+                                        <a href="#portfolio" className="btn-effect-link"><span>View all work</span></a>
+                                    </div>
+                                </div>
+                            </div>
                         </Scene>
 
                     </div>
