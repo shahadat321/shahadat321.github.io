@@ -52,20 +52,20 @@ class Contact extends Component{
                                 <form onSubmit={this.onSubmit} className="form-wrap">
                                     <div className="contact-col--item">
                                         <div className="form-group">
-                                            <label for="name" className="form-label">Name</label>
                                             <input id="name" name="name" className="form-control" type="text" placeholder=" " required />
+                                            <label for="name" className="form-label">Name</label>
                                         </div>
                                     </div>
                                     <div className="contact-col--item">
                                         <div className="form-group">
-                                            <label for="email" className="form-label">Email</label>
                                             <input id="email" name="email" className="form-control" type="email" placeholder=" " required />
+                                            <label for="email" className="form-label">Email</label>
                                         </div>
                                     </div>
                                     <div className="contact-col--item item-fluid">
                                         <div className="form-group">
-                                            <label for="comment" className="form-label">Feedback</label>
                                             <textarea id="comment" name="comment" className="form-control form-control--textarea" placeholder=" " required></textarea>
+                                            <label for="comment" className="form-label">Feedback</label>
                                         </div>
                                     </div>
 
